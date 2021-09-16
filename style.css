@@ -17,13 +17,12 @@ h1 {
 }
 h2 {
   font-size: 1.15rem;
-  font-weight: 900;
+  font-weight: 800;
   padding-bottom: 8px;
 }
 h3,
 h4 {
   font-size: 0.75rem;
-  font-weight: 900;
 }
 h2,
 h3,

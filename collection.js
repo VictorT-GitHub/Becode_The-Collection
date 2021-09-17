@@ -36,7 +36,7 @@ const collection = [
         title: "669, Pt.2",
         author: ["669"],
         beatmaker: ["669"],
-        album: "",
+        album: "single",
         releaseYear: "2021",
     },
     {

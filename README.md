@@ -1,8 +1,10 @@
 # Becode_The-collection
 
-**BeCode exercice**  
-Responsive CSS and DOM manipulation with JavaScript.  
+Responsive CSS and JavaScript DOM manipulation exercice.
+
 Responsive gallery that presents the last 32 songs I listened to.
+
+**JavaScript** - **CSS3** - **HTML5**
 
 [Look at the result on the GitHub page](https://victort-github.github.io/Becode_The-Collection/)
 

@@ -1,3 +1,4 @@
+// DATA COLLECTION
 const collection = [
   {
     picture: "images/dondada.jpg",

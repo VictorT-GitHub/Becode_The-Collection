@@ -1,77 +1,60 @@
-const leMain = document.querySelector("main");
+// CARD CREATION LOOP (for...of)
+for (const elem of collection) {
+  // HTML elements creation (+ CSS class)
+  const newCard = document.createElement("section");
+  newCard.setAttribute("class", "carte");
 
-// Loop de Creation des cartes
-let collectionIndex = 0;
-for (let elem of collection) {
-  // Creation des Element js pour html + Creation et Ajout de .class
-  let newSection = document.createElement("section");
-  newSection.setAttribute("class", "carte");
-
-  let newDivImage = document.createElement("div");
+  const newDivImage = document.createElement("div");
   newDivImage.setAttribute("class", "image");
-  let newDivInfos = document.createElement("div");
+  const newDivInfos = document.createElement("div");
   newDivInfos.setAttribute("class", "infos");
-  let newDivFlex = document.createElement("div");
+  const newDivFlex = document.createElement("div");
   newDivFlex.setAttribute("class", "flex");
-  let newDiv = document.createElement("div");
+  const newDiv = document.createElement("div");
 
-  let newH3Author = document.createElement("h3");
+  const newH3Author = document.createElement("h3");
   newH3Author.setAttribute("class", "Author");
-  let newH3Beat = document.createElement("h3");
+  const newH3Beat = document.createElement("h3");
   newH3Beat.setAttribute("class", "Beat");
-  let newH2Title = document.createElement("h2");
+  const newH2Title = document.createElement("h2");
   newH2Title.setAttribute("class", "Title");
-  let newH4Album = document.createElement("h4");
+  const newH4Album = document.createElement("h4");
   newH4Album.setAttribute("class", "Album");
-  let newH4Year = document.createElement("h4");
+  const newH4Year = document.createElement("h4");
   newH4Year.setAttribute("class", "Year");
 
-  let newImage = document.createElement("img");
-  newImage.setAttribute("src", collection[collectionIndex].picture);
-  newImage.setAttribute(
-    "alt",
-    `image_pochette_${collection[collectionIndex].album}`
-  );
+  const newImage = document.createElement("img");
+  newImage.setAttribute("src", elem.picture);
+  newImage.setAttribute("alt", `image_pochette_${elem.album}`);
 
-  // Creation TextNodes pour textes des cartes
-  let authorText = document.createTextNode(
-    collection[collectionIndex].author[0]
-  );
-  let beatText = document.createTextNode(
-    collection[collectionIndex].beatmaker[0]
-  );
-  let titleText = document.createTextNode(collection[collectionIndex].title);
-  let albumText = document.createTextNode(collection[collectionIndex].album);
-  let yearText = document.createTextNode(
-    collection[collectionIndex].releaseYear
-  );
+  // TextNodes creation
+  const authorText = document.createTextNode(elem.author[0]);
+  const beatText = document.createTextNode(elem.beatmaker[0]);
+  const titconstext = document.createTextNode(elem.title);
+  const albumText = document.createTextNode(elem.album);
+  const yearText = document.createTextNode(elem.releaseYear);
 
-  // Deplacement des 5 [textNode] des cartes dans [Element h2 h3 h4] correspondant
+  // Placement of TextNodes inside their HTML elements
   newH3Author.appendChild(authorText);
   newH3Beat.appendChild(beatText);
-  newH2Title.appendChild(titleText);
+  newH2Title.appendChild(titconstext);
   newH4Album.appendChild(albumText);
   newH4Year.appendChild(yearText);
 
-  // Deplacement des 5 [Element h2 h3 h4] dans [Element div] correspondant
+  // Placement of HTML elems inside each other
   newDivFlex.appendChild(newH3Author);
   newDivFlex.appendChild(newH3Beat);
-
   newDiv.appendChild(newH2Title);
   newDiv.appendChild(newH4Album);
   newDiv.appendChild(newH4Year);
 
-  // Deplacement des [Element div] dans [Element div]
   newDivImage.appendChild(newImage);
   newDivInfos.appendChild(newDivFlex);
   newDivInfos.appendChild(newDiv);
 
-  // Deplacement des [Element div] dans [Element section]
-  newSection.appendChild(newDivImage);
-  newSection.appendChild(newDivInfos);
+  newCard.appendChild(newDivImage);
+  newCard.appendChild(newDivInfos);
 
-  // Deplacement de [Element section] dans [Element main]
-  leMain.appendChild(newSection);
-
-  collectionIndex++;
+  // Each card goes into the main (flex box)
+  document.querySelector("main").appendChild(newCard);
 }

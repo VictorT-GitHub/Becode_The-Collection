@@ -4,8 +4,6 @@ Gallerie responsive qui présente les 12 dernières musiques que j'ai écouté.
 
 [Look at the result on the GitHub page](https://victort-github.github.io/Becode_The-Collection/)
 
-## Responsive detail
-
 | Window width    | Responsive detail                             |
 | --------------- | --------------------------------------------- |
 | ... -> 1100px   | gallerie width = max 1100px & max 4 cards     |

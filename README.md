@@ -1,6 +1,8 @@
 # Becode_The-collection
 
-Gallerie responsive qui présente les 12 dernières musiques que j'ai écouté.
+**BeCode exercice**
+Responsive CSS and DOM manipulation with JavaScript.
+Responsive gallery that presents the last 32 songs I listened to.
 
 [Look at the result on the GitHub page](https://victort-github.github.io/Becode_The-Collection/)
 
